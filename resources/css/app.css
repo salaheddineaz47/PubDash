@@ -1,11 +1,33 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+@layer components {
+    .tag {
+        @apply px-2 py-1 text-xs font-medium rounded-full text-white;
+    }
+    .tag-laravel {
+        @apply bg-red-500;
+    }
+    .tag-aws {
+        @apply bg-orange-500;
+    }
+    .tag-django {
+        @apply bg-green-600;
+    }
+    .tag-vue {
+        @apply bg-emerald-500;
+    }
+    .tag-php {
+        @apply bg-indigo-500;
+    }
+    .card {
+        @apply bg-white rounded-xl shadow-sm transition-all duration-300 hover:shadow-md border border-gray-100;
+    }
+    .card-header {
+        @apply text-lg font-semibold text-gray-800 border-b border-gray-100 p-4;
+    }
+    .card-body {
+        @apply p-4;
+    }
 }
